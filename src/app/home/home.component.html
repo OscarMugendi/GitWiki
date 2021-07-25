@@ -22,7 +22,7 @@
             <b>{{myprofile.name}}</b><small> ({{myprofile.login}}) </small>
         </div>
         <div class="panel-body">
-            <div class="row">
+            <div class="row clearfix">
                 <div class="col-sm-3">
                     <img src="{{myprofile.avatar_url}}" class="img-circle img-responsive" alt="Image">
                 </div>
@@ -35,18 +35,20 @@
                 <div style="padding-bottom: 10%;" class="col-sm-4">
                     <div>
                         <p>
-                            <span class="label label-info">{{myprofile.public_repos}} Public Repositories</span>
-                            <br>
-                            <span class="label label-default">{{myprofile.followers}} Followers</span>
+                            <span class="clearfix label label-info">{{myprofile.public_repos}} Public Repositories</span>
+                            <span class="clearfix label label-default">{{myprofile.followers}} Followers</span>
                         </p>
-                        <p><a href="{{myprofile.html_url}}" target="_blank" class="btn btn-primary btn-sm">View Github Page</a></p>
+                        <p class="clearfix"><a href="{{myprofile.html_url}}" target="_blank" class="btn btn-primary btn-sm">View Github Page</a></p>
                         <div class="panel panel-default">
                             <div class="panel-heading">
-                                <h3 class="panel-title">Repositories:</h3>
+                                <p class="panel-title"><b>Repositories:</b></p>
                             </div>
                             <div class="panel-body" *ngFor="let repo of myrepos">
-                                <p class="clearfix">{{myrepos.name}} <a href="{{myrepos.html_url}}" target="_blank" class="btn btn-sm btn-success pull-right">View repository on Github</a></p>
-                                <h6>{{myrepos.description}}</h6>
+                                <p class="clearfix">
+                                    {{myrepos.name}} <a href="{{myrepos.html_url}}" target="_blank" class="btn btn-sm btn-success pull-right">View repository on Github</a>
+                                </p>
+                                <p class="clearfix">{{myrepos.description}}</p>
+                                <p class="clearfix">{{myrepos.homepage}}</p>
                             </div>
                         </div>
                     </div>

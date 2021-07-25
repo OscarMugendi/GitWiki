@@ -10,11 +10,13 @@ import { Router } from '@angular/router';
 export class HomeComponent implements OnInit {
   myprofile:any;
   myrepos:any;
-  username:string = 'OscarMugendi'
+  username:string="OscarMugendi";
 
   constructor(private homeservice:HomeService){}
 
   myProfile(){
+    this.homeservice.updateUser(this.username);
+
     this.homeservice.getUser().subscribe(myprofile => {
       console.log(myprofile);
       this.myprofile = myprofile;
@@ -24,8 +26,6 @@ export class HomeComponent implements OnInit {
       console.log(myrepos);
       this.myrepos = myrepos;
     })
-
-    this.homeservice.updateUser(this.username);
   }
 
   ngOnInit(){
