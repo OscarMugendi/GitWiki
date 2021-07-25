@@ -5,9 +5,7 @@ import { environment } from 'src/environments/environment';
 import { Component, OnInit, Inject } from '@angular/core';
 import 'rxjs/add/operator/map'
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class HomeService {
 
   private username: string;
@@ -21,7 +19,10 @@ constructor(private http: HttpClient) {
 
 getUser() {
   return this.http.get("https://api.github.com/users/" + this.username + "?client_id=" + this.clientID + "&client_secret=" +this.clientSecret)
-  .map(res => res.json());
+}
+
+getRepos() {
+  return this.http.get("https;//api.github.com/users/" + this.username + "/repos?client_id=" + this.clientID + "%client_secret=" + this.clientSecret)
 }
 
 ngOnInit() {}
