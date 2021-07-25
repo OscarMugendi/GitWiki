@@ -6,6 +6,8 @@ export const environment = {
   production: false,
   apiUrl:"https://api.github.com",
   APIKEY: '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',
+  clientID:"78181b277a6a06bebb0d",
+  clientSecret:"1681b22872afd6aa2d8b77869d8c29db4ae3675f"
 };
 
 /*
