@@ -1,65 +1,52 @@
-<!doctype html>
-
-<html lang="en">
-
-<head>
-
-    <meta charset="utf-8">
-    <base href="/">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <title>GitWiki</title>
-
-</head>
-
-<body>
-    <br>
+<div class="container">
     <h1 style="text-align: center;"><b> GitWiki </b></h1>
-    <h4 style="text-align: center; font-style: italic;"><b>A web interface for Github API.</b></h4>
+    <br>
+    <h5 style="text-align: center; font-style: italic;"><b>A web interface for Github API.</b></h5>
     <br>
     <h6 style="text-align: center;"><b>A Mugendi Production (2021).</b></h6>
-    <br><br><br><br>
-
-    <div style="border: 2px;" class="container">
-        <div class="button-group">
-            <button class="btn btn-primary btn-block btn-lg">Search by Username</button>
-        </div>
-    </div>
     <br>
+    <hr>
+</div>
 
-    <div style="border: 2px;" class="container">
-        <div class="button-group">
-            <button class="btn btn-success btn-block btn-lg">Search by Repository</button>
-        </div>
+<div class="container">
+    <div class="button-group">
+        <button class="btn btn-primary btn-lg">Search by Username</button>
+        <hr>
+        <button class="btn btn-success btn-lg">Search by Repository</button>
     </div>
+</div>
+<br>
+<hr>
 
-    <div *ngIf="myprofile">
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                {{myprofile.name}}<small>({{myprofile.login}})</small>
-            </div>
-            <div class="panel-body">
-                <div class="row">
-                    <div class="col-sm-3">
-                        <img src="{{myprofile.avatar_url}}" class="img-circle img-responsive" alt="Image">
-                    </div>
-                    <div class="col-sm-5">
-                        <ul class="list-group">
-                            <li class="list-group-item" *ngIf="myprofile.bio">{{myprofile.bio}}</li>
-                            <li class="list-group-item" *ngIf="myprofile.email">{{myprofile.email}}</li>
-                            <li class="list-group-item" *ngIf="myprofile.blog">{{myprofile.blog}}</li>
-                        </ul>
-                    </div>
-                    <div class="col-sm-4">
-                        <div>
-                            <p><a href="{{myprofile.html_url}}" target="_blank" class="btn btn-success btn-sm">"View on Github"</a></p>
-                        </div>
+<div *ngIf="myprofile">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            {{myprofile.name}}<small>({{myprofile.login}})</small>
+        </div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-sm-3">
+                    <img src="{{myprofile.avatar_url}}" class="img-circle img-responsive" alt="Image">
+                </div>
+                <div class="col-sm-5">
+                    <ul class="list-class">
+                        <li class="list-item" *ngIf="myprofile.bio">{{myprofile.bio}}</li>
+                        <li class="list-item" *ngIf="myprofile.email">{{myprofile.email}}</li>
+                    </ul>
+                </div>
+                <div class="col-sm-4">
+                    <div>
+                        <p>
+                            <span class="label label-info">{{myprofile.public_repos}} Public Repositories</span>
+                            <span class="label label-default">{{myprofile.followers}} Followers</span>
+                        </p>
+                        <p><a href="{{myprofile.html_url}}" target="_blank" class="btn btn-success btn-sm">"View on Github"</a></p>
                         <div class="panel panel-default">
                             <div class="panel-heading">
                                 <h3 class="panel-title">Repositories</h3>
                             </div>
                             <div class="panel-body" *ngFor="let repo of myrepos">
-                                <p class="clearfix">
+                                <p>
                                     {{myrepos.name}} <a href="{{myrepos.html_url}}" target="_blank" class="btn btn-sm btn-warning pull-right">View on Github</a>
                                 </p>
                                 <p>{{myrepos.description}}</p>
@@ -70,6 +57,3 @@
             </div>
         </div>
     </div>
-</body>
-
-</html>

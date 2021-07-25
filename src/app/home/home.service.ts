@@ -1,8 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpClientModule, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { environment } from 'src/environments/environment';
-import { Component, OnInit, Inject } from '@angular/core';
+import { map } from 'rxjs/operators';
 
 @Injectable()
 export class HomeService {
