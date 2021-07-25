@@ -48,10 +48,11 @@
                                 <p class="panel-title clearfix"><b>Repositories:</b></p>
                             </div>
                             <div class="panel-body" *ngFor="let myrepo of myrepos">
-                                <p class="clearfix">{{myrepos.name}}</p>
-                                <p class="clearfix"><a href="{{myrepos.html_url}}" target="_blank" class="btn btn-sm btn-success pull-right">View repository on Github</a></p>
-                                <p class="clearfix">{{myrepos.description}}</p>
-                                <p class="clearfix">{{myrepos.homepage}}</p>
+                                <p class="clearfix">
+                                    {{myrepos.name}} <a href="{{myrepos.html_url}}" target="_blank" class="btn btn-sm btn-success pull-right">View repository on Github</a>
+                                </p>
+                                <p>{{myrepos.description}}</p>
+                                <p>{{myrepos.homepage}}</p>
                             </div>
                         </div>
                     </div>
