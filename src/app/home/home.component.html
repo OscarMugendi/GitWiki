@@ -19,34 +19,37 @@
 <div *ngIf="myprofile">
     <div class="panel panel-default">
         <div class="panel-heading">
-            <b>{{myprofile.name}}</b><small> ({{myprofile.login}}) </small>
+            <b class="clearfix">{{myprofile.name}}</b>
+            <small> ({{myprofile.login}}) </small>
         </div>
+        <br>
         <div class="panel-body">
-            <div class="row clearfix">
+            <div class="row">
                 <div class="col-sm-3">
-                    <img src="{{myprofile.avatar_url}}" class="img-circle img-responsive" alt="Image">
+                    <img src="{{myprofile.avatar_url}}" class="img-circle img-responsive clearfix" alt="Image">
                 </div>
                 <div class="col-sm-5">
-                    <ul class="list-class">
+                    <ul class="list-class clearfix">
                         <li class="list-item" *ngIf="myprofile.bio">{{myprofile.bio}}</li>
+                        <br>
                         <li class="list-item" *ngIf="myprofile.email">{{myprofile.email}}</li>
                     </ul>
                 </div>
                 <div style="padding-bottom: 10%;" class="col-sm-4">
                     <div>
                         <p>
-                            <span class="clearfix label label-info">{{myprofile.public_repos}} Public Repositories</span>
-                            <span class="clearfix label label-default">{{myprofile.followers}} Followers</span>
+                            <span class="label clearfix label-info">{{myprofile.public_repos}} Public Repositories</span>
+                            <br>
+                            <span class="label clearfix label-default">{{myprofile.followers}} Followers</span>
                         </p>
                         <p class="clearfix"><a href="{{myprofile.html_url}}" target="_blank" class="btn btn-primary btn-sm">View Github Page</a></p>
                         <div class="panel panel-default">
                             <div class="panel-heading">
-                                <p class="panel-title"><b>Repositories:</b></p>
+                                <p class="panel-title clearfix"><b>Repositories:</b></p>
                             </div>
-                            <div class="panel-body" *ngFor="let repo of myrepos">
-                                <p class="clearfix">
-                                    {{myrepos.name}} <a href="{{myrepos.html_url}}" target="_blank" class="btn btn-sm btn-success pull-right">View repository on Github</a>
-                                </p>
+                            <div class="panel-body" *ngFor="let myrepo of myrepos">
+                                <p class="clearfix">{{myrepos.name}}</p>
+                                <p class="clearfix"><a href="{{myrepos.html_url}}" target="_blank" class="btn btn-sm btn-success pull-right">View repository on Github</a></p>
                                 <p class="clearfix">{{myrepos.description}}</p>
                                 <p class="clearfix">{{myrepos.homepage}}</p>
                             </div>
