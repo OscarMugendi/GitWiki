@@ -5,7 +5,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
-import { HomeService } from './services/home.service';
 
 @NgModule({
   declarations: [
@@ -17,7 +16,7 @@ import { HomeService } from './services/home.service';
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [HomeService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
