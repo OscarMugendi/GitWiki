@@ -8,14 +8,11 @@
     <hr>
 </div>
 
-<div class="container">
-    <div class="button-group">
-        <button routerLink="" class="btn btn-primary btn-lg">Search by Username</button>
-        <hr>
-        <button class="btn btn-success btn-lg">Search by Repository</button>
+<form action="" class="search-form">
+    <div class="form-group">
+        <input type="text" class="form-control" placeholder="Search by Username" [(ngModel)]="username" name="username" (keyup)="SearchUserProfile()">
     </div>
-</div>
-<br>
+</form>
 <hr>
 
 <div *ngIf="myprofile">
