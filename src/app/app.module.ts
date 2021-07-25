@@ -19,7 +19,7 @@ import { HomeService } from './home/home.service';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    RouterModule
+    RouterModule,
   ],
   providers: [HomeService],
   bootstrap: [AppComponent]
