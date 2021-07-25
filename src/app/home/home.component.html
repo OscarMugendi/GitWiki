@@ -21,7 +21,7 @@
 <div *ngIf="myprofile">
     <div class="panel panel-default">
         <div class="panel-heading">
-            {{myprofile.name}}<small>({{myprofile.login}})</small>
+            {{myprofile.name}}<small> ({{myprofile.login}}) </small>
         </div>
         <div class="panel-body">
             <div class="row">
@@ -38,6 +38,7 @@
                     <div>
                         <p>
                             <span class="label label-info">{{myprofile.public_repos}} Public Repositories</span>
+                            <br>
                             <span class="label label-default">{{myprofile.followers}} Followers</span>
                         </p>
                         <p><a href="{{myprofile.html_url}}" target="_blank" class="btn btn-success btn-sm">"View on Github"</a></p>
