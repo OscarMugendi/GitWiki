@@ -3,4 +3,5 @@
 @import '~bootstrap/dist/css/bootstrap.min.css';
 body {
     font-family: cursive;
+    background-color: darkgray;
 }

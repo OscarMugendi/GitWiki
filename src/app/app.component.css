@@ -2,4 +2,9 @@
 body {
     font-family: cursive;
     color: black;
+    background-color: darkgrey;
+}
+
+.container {
+    text-align: center;
 }
