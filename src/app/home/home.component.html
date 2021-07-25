@@ -33,7 +33,7 @@
         </div>
     </div>
 
-    <div ngIf="user">
+    <div *ngIf="myprofile">
         <div class="panel panel-default">
             <div class="panel-heading">
                 {{myprofile.name}}<small>({{myprofile.login}})</small>
@@ -45,9 +45,9 @@
                     </div>
                     <div class="col-sm-5">
                         <ul class="list-group">
-                            <li class="list-group-item" ngIf="myprofile.bio">{{myprofile.bio}}</li>
-                            <li class="list-group-item" ngIf="myprofile.email">{{myprofile.email}}</li>
-                            <li class="list-group-item" ngIf="myprofile.blog">{{myprofile.blog}}</li>
+                            <li class="list-group-item" *ngIf="myprofile.bio">{{myprofile.bio}}</li>
+                            <li class="list-group-item" *ngIf="myprofile.email">{{myprofile.email}}</li>
+                            <li class="list-group-item" *ngIf="myprofile.blog">{{myprofile.blog}}</li>
                         </ul>
                     </div>
                     <div class="col-sm-4">
@@ -58,7 +58,7 @@
                             <div class="panel-heading">
                                 <h3 class="panel-title">Repositories</h3>
                             </div>
-                            <div class="panel-body" ngFor="let repo of repos">
+                            <div class="panel-body" *ngFor="let repo of myrepos">
                                 <p class="clearfix">
                                     {{myrepos.name}} <a href="{{myrepos.html_url}}" target="_blank" class="btn btn-sm btn-warning pull-right">View on Github</a>
                                 </p>
