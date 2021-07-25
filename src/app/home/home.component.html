@@ -35,6 +35,33 @@
             <button class="btn btn-success btn-block btn-lg">Search by Repository</button>
         </div>
     </div>
+
+    <div ngIf="user">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                {{user.name}}<small>({{user.login}})</small>
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-sm-3">
+                        <img src="{{user.avatar_url}}" class="img-circle img-responsive" alt="Image">
+                    </div>
+                    <div class="col-sm-5">
+                        <ul class="list-group">
+                            <li class="list-group-item" ngIf="user.bio">{{user.bio}}</li>
+                            <li class="list-group-item" ngIf="user.email">{{user.email}}</li>
+                            <li class="list-group-item" ngIf="user.blog">{{user.blog}}</li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-4">
+                        <div>
+                            <p><a href="{{user.html_url}}" target="_blank" class="btn btn-success btn-sm">"View on Github"</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
