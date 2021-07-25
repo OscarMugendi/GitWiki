@@ -7,11 +7,14 @@ import { HomeService } from './home.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  username:string;
-  myprofile:any[];
-  myrepos:any[];
+  myprofile:any = [];
+  myrepos:any = [];
 
-  constructor(private homeservice:HomeService){}
+  constructor(private homeservice:HomeService){
+  // Initialization inside the constructor
+  this.myprofile = [];
+  this.myrepos = [];
+}
 
   myProfile(){
     this.homeservice.getUser().subscribe(myprofile => {

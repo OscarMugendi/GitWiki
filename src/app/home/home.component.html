@@ -13,14 +13,11 @@
 </head>
 
 <body>
-
-    <body>
-        <br>
-        <h1 style="text-align: center;"><b> GitWiki </b></h1>
-        <h4 style="text-align: center; font-style: italic;"><b>A web interface for Github API.</b></h4>
-        <br>
-        <h6 style="text-align: center;"><b>A Mugendi Production (2021).</b></h6>
-    </body>
+    <br>
+    <h1 style="text-align: center;"><b> GitWiki </b></h1>
+    <h4 style="text-align: center; font-style: italic;"><b>A web interface for Github API.</b></h4>
+    <br>
+    <h6 style="text-align: center;"><b>A Mugendi Production (2021).</b></h6>
     <br><br><br><br>
 
     <div style="border: 2px;" class="container">
@@ -39,23 +36,23 @@
     <div ngIf="user">
         <div class="panel panel-default">
             <div class="panel-heading">
-                {{user.name}}<small>({{user.login}})</small>
+                {{myprofile.name}}<small>({{myprofile.login}})</small>
             </div>
             <div class="panel-body">
                 <div class="row">
                     <div class="col-sm-3">
-                        <img src="{{user.avatar_url}}" class="img-circle img-responsive" alt="Image">
+                        <img src="{{myprofile.avatar_url}}" class="img-circle img-responsive" alt="Image">
                     </div>
                     <div class="col-sm-5">
                         <ul class="list-group">
-                            <li class="list-group-item" ngIf="user.bio">{{user.bio}}</li>
-                            <li class="list-group-item" ngIf="user.email">{{user.email}}</li>
-                            <li class="list-group-item" ngIf="user.blog">{{user.blog}}</li>
+                            <li class="list-group-item" ngIf="myprofile.bio">{{myprofile.bio}}</li>
+                            <li class="list-group-item" ngIf="myprofile.email">{{myprofile.email}}</li>
+                            <li class="list-group-item" ngIf="myprofile.blog">{{myprofile.blog}}</li>
                         </ul>
                     </div>
                     <div class="col-sm-4">
                         <div>
-                            <p><a href="{{user.html_url}}" target="_blank" class="btn btn-success btn-sm">"View on Github"</a></p>
+                            <p><a href="{{myprofile.html_url}}" target="_blank" class="btn btn-success btn-sm">"View on Github"</a></p>
                         </div>
                         <div class="panel panel-default">
                             <div class="panel-heading">
@@ -63,15 +60,16 @@
                             </div>
                             <div class="panel-body" ngFor="let repo of repos">
                                 <p class="clearfix">
-                                    {{repo.name}} <a href="{{repo.html_url}}" target="_blank" class="btn btn-sm btn-warning pull-right">View on Github</a>
+                                    {{myrepos.name}} <a href="{{myrepos.html_url}}" target="_blank" class="btn btn-sm btn-warning pull-right">View on Github</a>
                                 </p>
-                                <p>{{repo.description}}</p>
+                                <p>{{myrepos.description}}</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 </body>
 
 </html>
