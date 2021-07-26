@@ -11,7 +11,7 @@ export class HomeService {
   private username: string;
   private apikey: string = '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';
   private clientID: string = '78181b277a6a06bebb0d';
-  private clientSecret: string = '1681b22872afd6aa2d8b77869d8c29db4ae3675f'
+  private clientSecret: string = '1681b22872afd6aa2d8b77869d8c29db4ae3675f';
 
 constructor(private http: HttpClient) {
   console.log("home is working!!");

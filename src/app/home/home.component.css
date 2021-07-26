@@ -1,17 +1,12 @@
 body {
     font-family: cursive;
     color: black;
+    background-color: darkgrey;
 }
 
 .container {
     text-align: center;
     padding-top: 10%;
-}
-
-.button-group {
-    width: 400px;
-    height: 40px;
-    display: inline-block;
 }
 
 .searchbar {

@@ -1,3 +1,15 @@
-<p>
-  repo works!
-</p>
+<form action="" class="searchbar">
+    <div class="form-group">
+        <input type="text" class="form-control" placeholder="Search by Repository" [(ngModel)]="repository" name="repository" (keyup)="ReposProfile()">
+    </div>
+</form>
+
+<div *ngIf="userprofiles">
+    <div class="panel panel-default">
+        <div class="panel panel-body" *ngFor="let userprofile of userprofiles">
+            <b class="clearfix">{{userprofiles.name}}<a href="{{userprofiles.html_url}}" target="_blank" class="btn btn-sm btn-success pull-right">View on Github</a></b>
+            <p>{{userprofiles.description}}</p>
+            <p>{{userprofiles.homepage}}</p>
+        </div>
+    </div>
+</div>

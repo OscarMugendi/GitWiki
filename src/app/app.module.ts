@@ -14,7 +14,7 @@ import { RepoComponent } from './repo/repo.component';
   declarations: [	
     AppComponent,
     HomeComponent,
-      RepoComponent
+    RepoComponent
    ],
   imports: [
     BrowserModule,

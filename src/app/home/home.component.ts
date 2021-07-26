@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { HomeService } from './home.service';
-import { Router } from '@angular/router';
+import { RouterModule } from '@angular/router';
+import { RepoComponent } from '../repo/repo.component';
+import { RepoService } from '../repo/repo.service';
 
 @Component({
   selector: 'app-home',
