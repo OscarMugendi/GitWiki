@@ -9,11 +9,13 @@
         <hr>
     </div>
 
-    <form action="" class="searchbar clearfix">
+    <form action="" class="searchbar">
         <div class="form-group">
-            <input text type="text" class="form-control" placeholder="Search by Username" [(ngModel)]="username" name="username" (keyup)="myProfile()">
+            <input type="text" class="form-control" placeholder="Search by Username" [(ngModel)]="username" name="username" (keyup)="myProfile()">
         </div>
-        <app-repo></app-repo>
+        <div>
+            <app-repo></app-repo>
+        </div>
     </form>
     <hr>
 
