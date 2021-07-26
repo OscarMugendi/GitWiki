@@ -1,14 +1,27 @@
 # GitWiki
 
+GitWiki is a web application designed to access the Github API then retrieve data and present it on a user-friendly interface. This app is still in development. Any feedback or insight would be greatly appreciated.
+
+License MIT Copyright(c) 2021
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.2.
+
+## Technologies Used
+
+<ul>
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>JavaScript</li>
+    <li>TypeScript</li>
+    <li>Bootstrap</li>
+    <li>Angular</li>
+    <li>JQuery</li>
+    <li>Git</li>
+</ul>
 
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
 ## Build
 
