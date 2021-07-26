@@ -8,12 +8,14 @@ import { HomeComponent } from './home/home.component';
 import { FormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeService } from './home/home.service';
+import { RepoComponent } from './repo/repo.component';
 
 @NgModule({
-  declarations: [
+  declarations: [	
     AppComponent,
-    HomeComponent
-  ],
+    HomeComponent,
+      RepoComponent
+   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
