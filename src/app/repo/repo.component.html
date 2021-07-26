@@ -4,12 +4,12 @@
     </div>
 </form>
 
-<div *ngIf="userprofiles">
+<div *ngIf="repoprofiles">
     <div class="panel panel-default">
-        <div class="panel panel-body" *ngFor="let userprofile of userprofiles">
-            <b class="clearfix">{{userprofiles.name}}<a href="{{userprofiles.html_url}}" target="_blank" class="btn btn-sm btn-success pull-right">View on Github</a></b>
-            <p>{{userprofiles.description}}</p>
-            <p>{{userprofiles.homepage}}</p>
+        <div class="panel panel-body">
+            <b class="clearfix">{{repoprofiles.name}}<a href="{{repoprofiles.html_url}}" target="_blank" class="btn btn-sm btn-success pull-right">View on Github</a></b>
+            <p>{{repoprofiles.description}}</p>
+            <p>{{repoprofiles.homepage}}</p>
         </div>
     </div>
 </div>

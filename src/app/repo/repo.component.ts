@@ -7,7 +7,7 @@ import { RouterModule } from '@angular/router';
   styleUrls: ['./repo.component.css']
 })
 export class RepoComponent implements OnInit {
-  userprofiles:any;
+  repoprofiles:any;
   repository:string="GitWiki";
 
   constructor(private reposervice:RepoService) { }
@@ -15,9 +15,9 @@ export class RepoComponent implements OnInit {
   ReposProfile(){
     this.reposervice.updateRepos(this.repository);
 
-    this.reposervice.getUserRepos().subscribe(userprofiles => {
-      console.log(userprofiles);
-      this.userprofiles = userprofiles;
+    this.reposervice.getUserRepos().subscribe(repoprofiles => {
+      console.log(repoprofiles);
+      this.repoprofiles = repoprofiles;
     })
   }
 
