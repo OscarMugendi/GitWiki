@@ -8,7 +8,7 @@ import { RouterModule } from '@angular/router';
 })
 export class RepoComponent implements OnInit {
   repoprofiles:any;
-  repository:string="GitWiki";
+  repository:string="";
 
   constructor(private reposervice:RepoService) { }
 
@@ -22,7 +22,7 @@ export class RepoComponent implements OnInit {
   }
 
   ngOnInit(){
-    this.ReposProfile()
+    //this.ReposProfile()
   }
 
 }

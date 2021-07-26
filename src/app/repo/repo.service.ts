@@ -13,7 +13,7 @@ export class RepoService {
 
 constructor(private http:HttpClient) { 
   console.log("repo is working!!");
-  this.repository = "GitWiki";
+  this.repository = "";
 }
 
 getUserRepos() {
