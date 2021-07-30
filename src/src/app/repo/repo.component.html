@@ -1,0 +1,15 @@
+<form action="" class="reposearchbar">
+    <div class="form-group">
+        <input type="text" class="form-control" placeholder="Search by Repository" [(ngModel)]="repository" name="repository" (keyup)="ReposProfile()">
+    </div>
+</form>
+
+<div *ngIf="repoprofiles">
+    <div class="panel panel-default">
+        <div class="panel panel-body">
+            <b class="clearfix">{{repoprofiles.name}}<a href="{{repoprofiles.html_url}}" target="_blank" class="btn btn-sm btn-success pull-right">View on Github</a></b>
+            <p>{{repoprofiles.description}}</p>
+            <p>{{repoprofiles.homepage}}</p>
+        </div>
+    </div>
+</div>
