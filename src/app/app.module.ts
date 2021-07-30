@@ -9,6 +9,7 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeService } from './home/home.service';
 import { RepoComponent } from './repo/repo.component';
+import { RepoService } from './repo/repo.service';
 
 @NgModule({
   declarations: [	
@@ -23,7 +24,7 @@ import { RepoComponent } from './repo/repo.component';
     FormsModule,
     RouterModule,
   ],
-  providers: [HomeService],
+  providers: [HomeService, RepoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
