@@ -13,6 +13,7 @@ export class HomeComponent implements OnInit {
   myprofile:any;
   myrepos:any;
   username:string="OscarMugendi";
+  repository:string="";
 
   constructor(private homeservice:HomeService){}
 

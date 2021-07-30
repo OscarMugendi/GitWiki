@@ -22,7 +22,7 @@ export class RepoComponent implements OnInit {
   }
 
   ngOnInit(){
-    //this.ReposProfile()
+    this.ReposProfile()
   }
 
 }

@@ -17,7 +17,7 @@ constructor(private http:HttpClient) {
 }
 
 getUserRepos() {
-  return this.http.get("https://api.github.com/users/" + this.repository + "/repos?client_id=" + this.clientID + "&client_secret=" + this.clientSecret)
+  return this.http.get("https://api.github.com/search/repositories?q=" + this.repository + "?client_id=" + this.clientID + "&client_secret=" + this.clientSecret)
 }
 
 updateRepos(repository:string){
